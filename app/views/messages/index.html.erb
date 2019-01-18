@@ -1,0 +1,17 @@
+<table>
+  <tr>
+    <th>姓名</th> 
+    <th>单位</th>
+    <th>联系方式</th>
+    <th>问题描述</th>
+  </tr>
+  <% @messages.each do |message| %>
+    <tr>
+      <td><%= message.name %></td>
+      <td><%= message.org %></td>
+      <td><%= message.contract %></td>
+      <td><%= message.text %></td>
+      <td><%= link_to 'Show', message_path(message) %></td>
+    </tr>
+  <% end %>
+</table>

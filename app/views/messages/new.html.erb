@@ -1,0 +1,30 @@
+<%= form_with scope: :message, url: messages_path,  local: true do |form| %>
+
+<div class="form"> 
+  <p>
+    <%= form.label :姓名 %><br>
+    <%= form.text_field :name %>
+  </p>
+
+  <p>
+    <%= form.label :单位 %><br>
+    <%= form.text_field :org %>
+  </p>
+
+  <p>
+    <%= form.label :联系方式 %><br>
+    <%= form.text_field :contract %>
+  </p>
+
+  <p>
+    <%= form.label :问题描述 %><br>
+    <%= form.text_area :text %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+
+</div>
+
+<% end %>
